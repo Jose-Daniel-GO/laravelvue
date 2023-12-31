@@ -1,0 +1,10 @@
+https://hfp69ilv.directus.app/auth/login
+
+email: testuser@gogodev.net
+
+password: 12345678
+
+
+https://hfp69ilv.directus.app/auth/login?email=xxxxxx&password=yyyyyy
+
+http://127.0.0.1:8000/api/ImportExcelPersonas

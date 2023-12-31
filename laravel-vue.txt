@@ -1,0 +1,4 @@
+composer require laravel/ui
+php artisan ui vue --auth
+
+http://127.0.0.1:8000/api/categories
