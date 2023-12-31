@@ -1,23 +1,33 @@
 import './bootstrap';
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
-// Assuming correct import syntax for VuePagination
-// import { VuePagination } from 'laravel-vue-pagination';
 
 const app = createApp({});
 
-import Tasks from './components/Tasks/Lists.vue';
-import Form from './components/Tasks/Form.vue';
-import Edit from './components/Tasks/Edit.vue';
+import NavComponent from './components/NavComponent.vue';
+import Auth from './views/AuthView.vue';
+import ListTaskView from './views/Tasks/Lists.vue';
+import FormTaskView from './views/Tasks/Form.vue';
+import EditTaskView from './views/Tasks/Edit.vue';
+import FooterComponent from './components/FooterComponent.vue';
 
-app.component('Tasks', Tasks);
-app.component('Form', Form);
-app.component('Edit', Edit);
+app.component('nav-component', NavComponent);
+app.component('auth-component', Auth);
+
+
+app.component('List', ListTaskView);
+app.component('Form', FormTaskView);
+app.component('Edit', EditTaskView);
+
+app.component('footer-component', FooterComponent);
+// import ExampleComponent from './components/ExampleComponent.vue';
+// app.component('app-component', App);
+// app.component('example-component', ExampleComponent);
 
 const routes = [
-  { path: '/form', component: Form },
-  { path: '/edit/:id', component: Edit },
-  { path: '/', component: Tasks },
+  { path: '/form', component: FormTaskView },
+  { path: '/edit/:id', component: EditTaskView },
+  { path: '/', component: ListTaskView },
 ];
 
 const router = createRouter({ history: createWebHistory(), routes });

@@ -7,6 +7,7 @@
 
                     <div class="card-body">
                         I'm an example component.
+                        <button type="submit" class="btn btn-primary"> click on me</button>
                     </div>
                 </div>
             </div>

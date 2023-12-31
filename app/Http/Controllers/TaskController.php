@@ -8,18 +8,14 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
-        $tasks = Task::paginate(5);
+        $tasks = Task::paginate(50);
         return response()->json($tasks);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
     }
@@ -44,9 +40,7 @@ class TaskController extends Controller
         return response()->json($task);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(Request $request, Task $task)
     {
         // $task = Task::find();
